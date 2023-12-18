@@ -1,0 +1,997 @@
+[debug] [2023-12-18T16:13:02.567Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:13:02.568Z] Command:       /usr/local/bin/firebase /Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-12-18T16:13:02.569Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:13:02.569Z] Platform:      darwin
+[debug] [2023-12-18T16:13:02.569Z] Node Version:  v18.5.0
+[debug] [2023-12-18T16:13:02.570Z] Time:          Mon Dec 18 2023 23:13:02 GMT+0700 (Indochina Time)
+[debug] [2023-12-18T16:13:02.570Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:13:02.663Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:13:02.664Z] > authorizing via signed-in user (brian.hoang.0101@gmail.com)
+[debug] [2023-12-18T16:13:02.664Z] [iam] checking project tunabook-aff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-18T16:13:02.666Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions [none]
+[debug] [2023-12-18T16:13:02.667Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions x-goog-quota-user=projects/tunabook-aff
+[debug] [2023-12-18T16:13:02.667Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:13:03.660Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions 200
+[debug] [2023-12-18T16:13:03.664Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:13:03.669Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff [none]
+[debug] [2023-12-18T16:13:04.284Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff 200
+[debug] [2023-12-18T16:13:04.288Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff {"projectId":"tunabook-aff","projectNumber":"663731897991","displayName":"tunabook-aff","name":"projects/tunabook-aff","resources":{"hostingSite":"tunabook-aff"},"state":"ACTIVE","etag":"1_d2de3a70-07c0-4793-be60-6046a3ade7b5"}
+[debug] [2023-12-18T16:13:06.365Z] defaultcredentials: writing to file /Users/brianhoang/.config/firebase/brian_hoang.0101_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:13:06.367Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites pageToken=&pageSize=10
+[debug] [2023-12-18T16:13:06.930Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites 200
+[debug] [2023-12-18T16:13:06.930Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites {"sites":[{"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-18T16:13:06.932Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config [none]
+[debug] [2023-12-18T16:13:07.822Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config 200
+[debug] [2023-12-18T16:13:07.823Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config {"projectId":"tunabook-aff","appId":"1:663731897991:web:d0abf27d62446559851a22","storageBucket":"tunabook-aff.appspot.com","apiKey":"AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM","authDomain":"tunabook-aff.firebaseapp.com","messagingSenderId":"663731897991"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-18T16:13:12.657Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:13:13.135Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:13:13.141Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version >= v18.17.0 is required.
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /
+[info]  • non-static route /products/[slug]
+[info] 
+[debug] [2023-12-18T16:13:18.351Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:13:18.800Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:13:18.801Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[debug] [2023-12-18T16:13:29.030Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:820:11)
+    at Object.execSync (node:child_process:891:15)
+    at execSync (pkg/prelude/bootstrap.js:2111:30)
+    at prepareFrameworks (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/frameworks/index.js:372:42)
+    at async deploy (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-12-18T16:14:57.269Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:14:57.271Z] Command:       /usr/local/bin/firebase /Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-12-18T16:14:57.271Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:14:57.272Z] Platform:      darwin
+[debug] [2023-12-18T16:14:57.272Z] Node Version:  v18.5.0
+[debug] [2023-12-18T16:14:57.273Z] Time:          Mon Dec 18 2023 23:14:57 GMT+0700 (Indochina Time)
+[debug] [2023-12-18T16:14:57.273Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:14:57.367Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:14:57.367Z] > authorizing via signed-in user (brian.hoang.0101@gmail.com)
+[debug] [2023-12-18T16:14:57.368Z] [iam] checking project tunabook-aff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-18T16:14:57.369Z] > refreshing access token with scopes: []
+[debug] [2023-12-18T16:14:57.371Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-12-18T16:14:57.372Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-18T16:14:57.727Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-12-18T16:14:57.730Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-12-18T16:14:57.751Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions [none]
+[debug] [2023-12-18T16:14:57.754Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions x-goog-quota-user=projects/tunabook-aff
+[debug] [2023-12-18T16:14:57.754Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:14:58.920Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions 200
+[debug] [2023-12-18T16:14:58.924Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:14:58.926Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff [none]
+[debug] [2023-12-18T16:15:00.280Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff 200
+[debug] [2023-12-18T16:15:00.281Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff {"projectId":"tunabook-aff","projectNumber":"663731897991","displayName":"tunabook-aff","name":"projects/tunabook-aff","resources":{"hostingSite":"tunabook-aff"},"state":"ACTIVE","etag":"1_d2de3a70-07c0-4793-be60-6046a3ade7b5"}
+[debug] [2023-12-18T16:15:02.424Z] defaultcredentials: writing to file /Users/brianhoang/.config/firebase/brian_hoang.0101_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:15:02.427Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites pageToken=&pageSize=10
+[debug] [2023-12-18T16:15:02.944Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites 200
+[debug] [2023-12-18T16:15:02.944Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites {"sites":[{"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-18T16:15:02.945Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config [none]
+[debug] [2023-12-18T16:15:03.835Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config 200
+[debug] [2023-12-18T16:15:03.836Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config {"projectId":"tunabook-aff","appId":"1:663731897991:web:d0abf27d62446559851a22","storageBucket":"tunabook-aff.appspot.com","apiKey":"AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM","authDomain":"tunabook-aff.firebaseapp.com","messagingSenderId":"663731897991"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-18T16:15:09.031Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:15:09.687Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:15:09.692Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version >= v18.17.0 is required.
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /
+[info]  • non-static route /products/[slug]
+[info] 
+[debug] [2023-12-18T16:15:15.618Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:15:16.261Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:15:16.262Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[debug] [2023-12-18T16:15:35.088Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:820:11)
+    at Object.execSync (node:child_process:891:15)
+    at execSync (pkg/prelude/bootstrap.js:2111:30)
+    at prepareFrameworks (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/frameworks/index.js:372:42)
+    at async deploy (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-12-18T16:16:16.542Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:16:16.544Z] Command:       /usr/local/bin/firebase /Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-12-18T16:16:16.545Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:16:16.545Z] Platform:      darwin
+[debug] [2023-12-18T16:16:16.545Z] Node Version:  v18.5.0
+[debug] [2023-12-18T16:16:16.546Z] Time:          Mon Dec 18 2023 23:16:16 GMT+0700 (Indochina Time)
+[debug] [2023-12-18T16:16:16.546Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:16:16.641Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:16:16.642Z] > authorizing via signed-in user (brian.hoang.0101@gmail.com)
+[debug] [2023-12-18T16:16:16.643Z] [iam] checking project tunabook-aff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-18T16:16:16.644Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions [none]
+[debug] [2023-12-18T16:16:16.645Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions x-goog-quota-user=projects/tunabook-aff
+[debug] [2023-12-18T16:16:16.646Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:16:17.613Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions 200
+[debug] [2023-12-18T16:16:17.617Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:16:17.622Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff [none]
+[debug] [2023-12-18T16:16:18.130Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff 200
+[debug] [2023-12-18T16:16:18.133Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff {"projectId":"tunabook-aff","projectNumber":"663731897991","displayName":"tunabook-aff","name":"projects/tunabook-aff","resources":{"hostingSite":"tunabook-aff"},"state":"ACTIVE","etag":"1_d2de3a70-07c0-4793-be60-6046a3ade7b5"}
+[debug] [2023-12-18T16:16:20.314Z] defaultcredentials: writing to file /Users/brianhoang/.config/firebase/brian_hoang.0101_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:16:20.316Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites pageToken=&pageSize=10
+[debug] [2023-12-18T16:16:20.856Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites 200
+[debug] [2023-12-18T16:16:20.857Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites {"sites":[{"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-18T16:16:20.858Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config [none]
+[debug] [2023-12-18T16:16:21.748Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config 200
+[debug] [2023-12-18T16:16:21.749Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config {"projectId":"tunabook-aff","appId":"1:663731897991:web:d0abf27d62446559851a22","storageBucket":"tunabook-aff.appspot.com","apiKey":"AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM","authDomain":"tunabook-aff.firebaseapp.com","messagingSenderId":"663731897991"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-18T16:16:26.974Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:16:27.585Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:16:27.591Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version >= v18.17.0 is required.
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /
+[info]  • non-static route /products/[slug]
+[info] 
+[debug] [2023-12-18T16:16:32.911Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:17:42.690Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:17:42.692Z] Command:       /usr/local/bin/firebase /Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-12-18T16:17:42.693Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:17:42.693Z] Platform:      darwin
+[debug] [2023-12-18T16:17:42.693Z] Node Version:  v18.5.0
+[debug] [2023-12-18T16:17:42.694Z] Time:          Mon Dec 18 2023 23:17:42 GMT+0700 (Indochina Time)
+[debug] [2023-12-18T16:17:42.694Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:17:42.787Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:17:42.788Z] > authorizing via signed-in user (brian.hoang.0101@gmail.com)
+[debug] [2023-12-18T16:17:42.789Z] [iam] checking project tunabook-aff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-18T16:17:42.791Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions [none]
+[debug] [2023-12-18T16:17:42.791Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions x-goog-quota-user=projects/tunabook-aff
+[debug] [2023-12-18T16:17:42.792Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:17:43.772Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions 200
+[debug] [2023-12-18T16:17:43.775Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:17:43.779Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff [none]
+[debug] [2023-12-18T16:17:44.132Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff 200
+[debug] [2023-12-18T16:17:44.137Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff {"projectId":"tunabook-aff","projectNumber":"663731897991","displayName":"tunabook-aff","name":"projects/tunabook-aff","resources":{"hostingSite":"tunabook-aff"},"state":"ACTIVE","etag":"1_d2de3a70-07c0-4793-be60-6046a3ade7b5"}
+[debug] [2023-12-18T16:17:46.169Z] defaultcredentials: writing to file /Users/brianhoang/.config/firebase/brian_hoang.0101_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:17:46.171Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites pageToken=&pageSize=10
+[debug] [2023-12-18T16:17:46.661Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites 200
+[debug] [2023-12-18T16:17:46.662Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites {"sites":[{"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-18T16:17:46.663Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config [none]
+[debug] [2023-12-18T16:17:47.688Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config 200
+[debug] [2023-12-18T16:17:47.689Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config {"projectId":"tunabook-aff","appId":"1:663731897991:web:d0abf27d62446559851a22","storageBucket":"tunabook-aff.appspot.com","apiKey":"AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM","authDomain":"tunabook-aff.firebaseapp.com","messagingSenderId":"663731897991"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-18T16:17:52.457Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:17:52.930Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:17:52.935Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version >= v18.17.0 is required.
+
+[debug] [2023-12-18T16:17:54.594Z] Error: ENOENT: no such file or directory, open '/Users/brianhoang/Documents/Project/tuna-bookstore/.next/server/middleware-manifest.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-12-18T16:18:42.145Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:18:42.147Z] Command:       /usr/local/bin/firebase /Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-12-18T16:18:42.147Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:18:42.147Z] Platform:      darwin
+[debug] [2023-12-18T16:18:42.148Z] Node Version:  v18.5.0
+[debug] [2023-12-18T16:18:42.149Z] Time:          Mon Dec 18 2023 23:18:42 GMT+0700 (Indochina Time)
+[debug] [2023-12-18T16:18:42.149Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:18:42.244Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:18:42.245Z] > authorizing via signed-in user (brian.hoang.0101@gmail.com)
+[debug] [2023-12-18T16:18:42.246Z] [iam] checking project tunabook-aff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-18T16:18:42.247Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions [none]
+[debug] [2023-12-18T16:18:42.248Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions x-goog-quota-user=projects/tunabook-aff
+[debug] [2023-12-18T16:18:42.249Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:18:43.233Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions 200
+[debug] [2023-12-18T16:18:43.237Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:18:43.241Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff [none]
+[debug] [2023-12-18T16:18:43.747Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff 200
+[debug] [2023-12-18T16:18:43.751Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff {"projectId":"tunabook-aff","projectNumber":"663731897991","displayName":"tunabook-aff","name":"projects/tunabook-aff","resources":{"hostingSite":"tunabook-aff"},"state":"ACTIVE","etag":"1_d2de3a70-07c0-4793-be60-6046a3ade7b5"}
+[debug] [2023-12-18T16:18:45.785Z] defaultcredentials: writing to file /Users/brianhoang/.config/firebase/brian_hoang.0101_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:18:45.787Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites pageToken=&pageSize=10
+[debug] [2023-12-18T16:18:46.328Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites 200
+[debug] [2023-12-18T16:18:46.329Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites {"sites":[{"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-18T16:18:46.330Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config [none]
+[debug] [2023-12-18T16:18:47.296Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config 200
+[debug] [2023-12-18T16:18:47.297Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config {"projectId":"tunabook-aff","appId":"1:663731897991:web:d0abf27d62446559851a22","storageBucket":"tunabook-aff.appspot.com","apiKey":"AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM","authDomain":"tunabook-aff.firebaseapp.com","messagingSenderId":"663731897991"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-18T16:18:52.158Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:18:52.655Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:18:52.661Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version >= v18.17.0 is required.
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /products/[slug]
+[info]  • non-static route /
+[info] 
+[debug] [2023-12-18T16:18:57.400Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:18:57.854Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:18:57.854Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[debug] [2023-12-18T16:19:07.288Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:820:11)
+    at Object.execSync (node:child_process:891:15)
+    at execSync (pkg/prelude/bootstrap.js:2111:30)
+    at prepareFrameworks (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/frameworks/index.js:372:42)
+    at async deploy (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-12-18T16:20:45.546Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:20:45.547Z] Command:       /usr/local/bin/firebase /Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-12-18T16:20:45.548Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:20:45.548Z] Platform:      darwin
+[debug] [2023-12-18T16:20:45.548Z] Node Version:  v18.5.0
+[debug] [2023-12-18T16:20:45.549Z] Time:          Mon Dec 18 2023 23:20:45 GMT+0700 (Indochina Time)
+[debug] [2023-12-18T16:20:45.549Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:20:45.644Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:20:45.645Z] > authorizing via signed-in user (brian.hoang.0101@gmail.com)
+[debug] [2023-12-18T16:20:45.646Z] [iam] checking project tunabook-aff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-18T16:20:45.647Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions [none]
+[debug] [2023-12-18T16:20:45.648Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions x-goog-quota-user=projects/tunabook-aff
+[debug] [2023-12-18T16:20:45.649Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:20:46.660Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions 200
+[debug] [2023-12-18T16:20:46.663Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:20:46.667Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff [none]
+[debug] [2023-12-18T16:20:47.152Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff 200
+[debug] [2023-12-18T16:20:47.157Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff {"projectId":"tunabook-aff","projectNumber":"663731897991","displayName":"tunabook-aff","name":"projects/tunabook-aff","resources":{"hostingSite":"tunabook-aff"},"state":"ACTIVE","etag":"1_d2de3a70-07c0-4793-be60-6046a3ade7b5"}
+[debug] [2023-12-18T16:20:49.307Z] defaultcredentials: writing to file /Users/brianhoang/.config/firebase/brian_hoang.0101_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:20:49.309Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites pageToken=&pageSize=10
+[debug] [2023-12-18T16:20:50.071Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites 200
+[debug] [2023-12-18T16:20:50.072Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites {"sites":[{"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-18T16:20:50.074Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config [none]
+[debug] [2023-12-18T16:20:50.990Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config 200
+[debug] [2023-12-18T16:20:50.991Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config {"projectId":"tunabook-aff","appId":"1:663731897991:web:d0abf27d62446559851a22","storageBucket":"tunabook-aff.appspot.com","apiKey":"AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM","authDomain":"tunabook-aff.firebaseapp.com","messagingSenderId":"663731897991"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-18T16:20:56.173Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:20:56.636Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:20:56.642Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version >= v18.17.0 is required.
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /products/[slug]
+[info]  • non-static route /
+[info] 
+[debug] [2023-12-18T16:21:02.555Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:21:03.146Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:21:03.147Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[debug] [2023-12-18T16:21:17.975Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:820:11)
+    at Object.execSync (node:child_process:891:15)
+    at execSync (pkg/prelude/bootstrap.js:2111:30)
+    at prepareFrameworks (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/frameworks/index.js:372:42)
+    at async deploy (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-12-18T16:25:15.668Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:25:15.670Z] Command:       /usr/local/bin/firebase /Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-12-18T16:25:15.670Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:25:15.670Z] Platform:      darwin
+[debug] [2023-12-18T16:25:15.671Z] Node Version:  v18.5.0
+[debug] [2023-12-18T16:25:15.672Z] Time:          Mon Dec 18 2023 23:25:15 GMT+0700 (Indochina Time)
+[debug] [2023-12-18T16:25:15.672Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:25:15.766Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:25:15.767Z] > authorizing via signed-in user (brian.hoang.0101@gmail.com)
+[debug] [2023-12-18T16:25:15.768Z] [iam] checking project tunabook-aff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-18T16:25:15.769Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions [none]
+[debug] [2023-12-18T16:25:15.770Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions x-goog-quota-user=projects/tunabook-aff
+[debug] [2023-12-18T16:25:15.771Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:25:16.935Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions 200
+[debug] [2023-12-18T16:25:16.939Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:25:16.943Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff [none]
+[debug] [2023-12-18T16:25:17.357Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff 200
+[debug] [2023-12-18T16:25:17.361Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff {"projectId":"tunabook-aff","projectNumber":"663731897991","displayName":"tunabook-aff","name":"projects/tunabook-aff","resources":{"hostingSite":"tunabook-aff"},"state":"ACTIVE","etag":"1_9fbf3507-3ab6-4602-ae34-ee3445be221e"}
+[debug] [2023-12-18T16:25:19.535Z] defaultcredentials: writing to file /Users/brianhoang/.config/firebase/brian_hoang.0101_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:25:19.537Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites pageToken=&pageSize=10
+[debug] [2023-12-18T16:25:20.063Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites 200
+[debug] [2023-12-18T16:25:20.064Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites {"sites":[{"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-18T16:25:20.065Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config [none]
+[debug] [2023-12-18T16:25:21.133Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config 200
+[debug] [2023-12-18T16:25:21.133Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config {"projectId":"tunabook-aff","appId":"1:663731897991:web:d0abf27d62446559851a22","storageBucket":"tunabook-aff.appspot.com","apiKey":"AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM","authDomain":"tunabook-aff.firebaseapp.com","messagingSenderId":"663731897991"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-18T16:25:26.260Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:25:26.734Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:25:26.740Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version >= v18.17.0 is required.
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /products/[slug]
+[info]  • non-static route /
+[info] 
+[debug] [2023-12-18T16:25:33.494Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:25:33.948Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:25:33.949Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[debug] [2023-12-18T16:25:43.948Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:820:11)
+    at Object.execSync (node:child_process:891:15)
+    at execSync (pkg/prelude/bootstrap.js:2111:30)
+    at prepareFrameworks (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/frameworks/index.js:372:42)
+    at async deploy (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-12-18T16:30:30.028Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:30:30.029Z] Command:       /usr/local/bin/firebase /Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-12-18T16:30:30.030Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:30:30.030Z] Platform:      darwin
+[debug] [2023-12-18T16:30:30.030Z] Node Version:  v18.5.0
+[debug] [2023-12-18T16:30:30.031Z] Time:          Mon Dec 18 2023 23:30:30 GMT+0700 (Indochina Time)
+[debug] [2023-12-18T16:30:30.031Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:30:30.123Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:30:30.124Z] > authorizing via signed-in user (brian.hoang.0101@gmail.com)
+[debug] [2023-12-18T16:30:30.125Z] [iam] checking project tunabook-aff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-18T16:30:30.126Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions [none]
+[debug] [2023-12-18T16:30:30.127Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions x-goog-quota-user=projects/tunabook-aff
+[debug] [2023-12-18T16:30:30.128Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:30:31.101Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions 200
+[debug] [2023-12-18T16:30:31.103Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:30:31.106Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff [none]
+[debug] [2023-12-18T16:30:31.535Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff 200
+[debug] [2023-12-18T16:30:31.538Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff {"projectId":"tunabook-aff","projectNumber":"663731897991","displayName":"tunabook-aff","name":"projects/tunabook-aff","resources":{"hostingSite":"tunabook-aff"},"state":"ACTIVE","etag":"1_9fbf3507-3ab6-4602-ae34-ee3445be221e"}
+[debug] [2023-12-18T16:30:33.665Z] defaultcredentials: writing to file /Users/brianhoang/.config/firebase/brian_hoang.0101_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:30:33.668Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites pageToken=&pageSize=10
+[debug] [2023-12-18T16:30:34.212Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites 200
+[debug] [2023-12-18T16:30:34.213Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites {"sites":[{"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-18T16:30:34.214Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config [none]
+[debug] [2023-12-18T16:30:35.376Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config 200
+[debug] [2023-12-18T16:30:35.377Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config {"projectId":"tunabook-aff","appId":"1:663731897991:web:d0abf27d62446559851a22","storageBucket":"tunabook-aff.appspot.com","apiKey":"AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM","authDomain":"tunabook-aff.firebaseapp.com","messagingSenderId":"663731897991"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-18T16:30:40.525Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:30:40.991Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:30:40.997Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version >= v18.17.0 is required.
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /products/[slug]
+[info]  • non-static route /
+[info] 
+[debug] [2023-12-18T16:30:46.871Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:30:47.450Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:30:47.451Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[debug] [2023-12-18T16:31:03.113Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:820:11)
+    at Object.execSync (node:child_process:891:15)
+    at execSync (pkg/prelude/bootstrap.js:2111:30)
+    at prepareFrameworks (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/frameworks/index.js:372:42)
+    at async deploy (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-12-18T16:38:29.130Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:38:29.132Z] Command:       /usr/local/bin/firebase /Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-12-18T16:38:29.132Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:38:29.132Z] Platform:      darwin
+[debug] [2023-12-18T16:38:29.133Z] Node Version:  v18.5.0
+[debug] [2023-12-18T16:38:29.135Z] Time:          Mon Dec 18 2023 23:38:29 GMT+0700 (Indochina Time)
+[debug] [2023-12-18T16:38:29.135Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:38:29.226Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:38:29.228Z] > authorizing via signed-in user (brian.hoang.0101@gmail.com)
+[debug] [2023-12-18T16:38:29.228Z] [iam] checking project tunabook-aff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-18T16:38:29.230Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions [none]
+[debug] [2023-12-18T16:38:29.231Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions x-goog-quota-user=projects/tunabook-aff
+[debug] [2023-12-18T16:38:29.232Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:38:31.263Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions 200
+[debug] [2023-12-18T16:38:31.266Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:38:31.271Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff [none]
+[debug] [2023-12-18T16:38:31.654Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff 200
+[debug] [2023-12-18T16:38:31.659Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff {"projectId":"tunabook-aff","projectNumber":"663731897991","displayName":"tunabook-aff","name":"projects/tunabook-aff","resources":{"hostingSite":"tunabook-aff"},"state":"ACTIVE","etag":"1_9fbf3507-3ab6-4602-ae34-ee3445be221e"}
+[debug] [2023-12-18T16:38:33.854Z] defaultcredentials: writing to file /Users/brianhoang/.config/firebase/brian_hoang.0101_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:38:33.856Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites pageToken=&pageSize=10
+[debug] [2023-12-18T16:38:34.379Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites 200
+[debug] [2023-12-18T16:38:34.380Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites {"sites":[{"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-18T16:38:34.382Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config [none]
+[debug] [2023-12-18T16:38:35.361Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config 200
+[debug] [2023-12-18T16:38:35.361Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config {"projectId":"tunabook-aff","appId":"1:663731897991:web:d0abf27d62446559851a22","storageBucket":"tunabook-aff.appspot.com","apiKey":"AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM","authDomain":"tunabook-aff.firebaseapp.com","messagingSenderId":"663731897991"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-18T16:38:40.576Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:38:41.025Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:38:41.032Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[info]    Linting and checking validity of types ...
+
+[info]    Creating an optimized production build ...
+
+[info]    Downloading swc package @next/swc-darwin-x64...
+
+[info]  ✓ Compiled successfully
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/2) ...
+
+[info]  ✓ Generating static pages (2/2) 
+
+[info]    Finalizing page optimization ...
+
+[info]    Collecting build traces ...
+
+[info] 
+
+[info] Route (pages)                              Size     First Load JS
+┌ λ /                                      4.55 kB        88.1 kB
+├   /_app                                  0 B            79.6 kB
+├ ○ /404                                   181 B          79.8 kB
+└ λ /products/[slug]                       622 B          84.2 kB
++ First Load JS shared by all              83.1 kB
+  ├ chunks/framework-0c7baedefba6b077.js   45.3 kB
+  ├ chunks/main-a82dbdedafde9961.js        32.8 kB
+  ├ chunks/pages/_app-0f2851a7f4a1b707.js  728 B
+  ├ chunks/webpack-fd8027ecb5121007.js     770 B
+  └ css/c1012f45b154dab3.css               3.52 kB
+
+[info] 
+
+[info] λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+[info] 
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /products/[slug]
+[info]  • non-static route /
+[info] 
+[debug] [2023-12-18T16:39:05.368Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:39:05.963Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:39:05.964Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[debug] [2023-12-18T16:39:26.236Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:820:11)
+    at Object.execSync (node:child_process:891:15)
+    at execSync (pkg/prelude/bootstrap.js:2111:30)
+    at prepareFrameworks (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/frameworks/index.js:372:42)
+    at async deploy (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-12-18T16:42:45.002Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:42:45.004Z] Command:       /usr/local/bin/firebase /Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-12-18T16:42:45.004Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:42:45.005Z] Platform:      darwin
+[debug] [2023-12-18T16:42:45.005Z] Node Version:  v18.5.0
+[debug] [2023-12-18T16:42:45.006Z] Time:          Mon Dec 18 2023 23:42:45 GMT+0700 (Indochina Time)
+[debug] [2023-12-18T16:42:45.006Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:42:45.100Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:42:45.101Z] > authorizing via signed-in user (brian.hoang.0101@gmail.com)
+[debug] [2023-12-18T16:42:45.102Z] [iam] checking project tunabook-aff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-18T16:42:45.104Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions [none]
+[debug] [2023-12-18T16:42:45.105Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions x-goog-quota-user=projects/tunabook-aff
+[debug] [2023-12-18T16:42:45.105Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:42:46.235Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions 200
+[debug] [2023-12-18T16:42:46.239Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:42:46.243Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff [none]
+[debug] [2023-12-18T16:42:46.612Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff 200
+[debug] [2023-12-18T16:42:46.617Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff {"projectId":"tunabook-aff","projectNumber":"663731897991","displayName":"tunabook-aff","name":"projects/tunabook-aff","resources":{"hostingSite":"tunabook-aff"},"state":"ACTIVE","etag":"1_9fbf3507-3ab6-4602-ae34-ee3445be221e"}
+[debug] [2023-12-18T16:42:48.824Z] defaultcredentials: writing to file /Users/brianhoang/.config/firebase/brian_hoang.0101_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:42:48.826Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites pageToken=&pageSize=10
+[debug] [2023-12-18T16:42:50.334Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites 200
+[debug] [2023-12-18T16:42:50.335Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites {"sites":[{"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-18T16:42:50.336Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config [none]
+[debug] [2023-12-18T16:42:51.237Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config 200
+[debug] [2023-12-18T16:42:51.239Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config {"projectId":"tunabook-aff","appId":"1:663731897991:web:d0abf27d62446559851a22","storageBucket":"tunabook-aff.appspot.com","apiKey":"AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM","authDomain":"tunabook-aff.firebaseapp.com","messagingSenderId":"663731897991"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-18T16:42:56.379Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:42:56.837Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:42:56.842Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[info]    Linting and checking validity of types ...
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/2) ...
+
+[info]  ✓ Generating static pages (2/2) 
+
+[info]    Finalizing page optimization ...
+
+[info]    Collecting build traces ...
+
+[info] 
+
+[info] Route (pages)                              Size     First Load JS
+┌ λ /                                      4.55 kB        88.1 kB
+├   /_app                                  0 B            79.6 kB
+├ ○ /404                                   181 B          79.8 kB
+└ λ /products/[slug]                       622 B          84.2 kB
++ First Load JS shared by all              83.1 kB
+  ├ chunks/framework-0c7baedefba6b077.js   45.3 kB
+  ├ chunks/main-a82dbdedafde9961.js        32.8 kB
+  ├ chunks/pages/_app-0f2851a7f4a1b707.js  728 B
+  ├ chunks/webpack-fd8027ecb5121007.js     770 B
+  └ css/c1012f45b154dab3.css               3.52 kB
+
+[info] 
+
+[info] λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+[info] 
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /products/[slug]
+[info]  • non-static route /
+[info] 
+[debug] [2023-12-18T16:43:18.518Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:43:19.110Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:43:19.111Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[debug] [2023-12-18T16:43:27.109Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:820:11)
+    at Object.execSync (node:child_process:891:15)
+    at execSync (pkg/prelude/bootstrap.js:2111:30)
+    at prepareFrameworks (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/frameworks/index.js:372:42)
+    at async deploy (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-12-18T16:44:34.460Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:44:34.461Z] Command:       /usr/local/bin/firebase /Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-12-18T16:44:34.462Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:44:34.462Z] Platform:      darwin
+[debug] [2023-12-18T16:44:34.462Z] Node Version:  v18.5.0
+[debug] [2023-12-18T16:44:34.463Z] Time:          Mon Dec 18 2023 23:44:34 GMT+0700 (Indochina Time)
+[debug] [2023-12-18T16:44:34.463Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:44:34.555Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:44:34.556Z] > authorizing via signed-in user (brian.hoang.0101@gmail.com)
+[debug] [2023-12-18T16:44:34.556Z] [iam] checking project tunabook-aff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-18T16:44:34.558Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions [none]
+[debug] [2023-12-18T16:44:34.559Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions x-goog-quota-user=projects/tunabook-aff
+[debug] [2023-12-18T16:44:34.559Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:44:35.684Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions 200
+[debug] [2023-12-18T16:44:35.688Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:44:35.693Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff [none]
+[debug] [2023-12-18T16:44:39.188Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff 200
+[debug] [2023-12-18T16:44:39.191Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff {"projectId":"tunabook-aff","projectNumber":"663731897991","displayName":"tunabook-aff","name":"projects/tunabook-aff","resources":{"hostingSite":"tunabook-aff"},"state":"ACTIVE","etag":"1_9fbf3507-3ab6-4602-ae34-ee3445be221e"}
+[debug] [2023-12-18T16:44:41.314Z] defaultcredentials: writing to file /Users/brianhoang/.config/firebase/brian_hoang.0101_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:44:41.317Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites pageToken=&pageSize=10
+[debug] [2023-12-18T16:44:42.854Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites 200
+[debug] [2023-12-18T16:44:42.859Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites {"sites":[{"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-18T16:44:42.861Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config [none]
+[debug] [2023-12-18T16:44:44.087Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config 200
+[debug] [2023-12-18T16:44:44.091Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config {"projectId":"tunabook-aff","appId":"1:663731897991:web:d0abf27d62446559851a22","storageBucket":"tunabook-aff.appspot.com","apiKey":"AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM","authDomain":"tunabook-aff.firebaseapp.com","messagingSenderId":"663731897991"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-18T16:44:49.463Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:44:49.939Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:44:49.941Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[info]    Linting and checking validity of types ...
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/2) ...
+
+[info]  ✓ Generating static pages (2/2) 
+
+[info]    Finalizing page optimization ...
+
+[info]    Collecting build traces ...
+
+[info] 
+
+[info] Route (pages)                              Size     First Load JS
+┌ λ /                                      4.55 kB        88.1 kB
+├   /_app                                  0 B            79.6 kB
+├ ○ /404                                   181 B          79.8 kB
+└ λ /products/[slug]                       622 B          84.2 kB
++ First Load JS shared by all              83.1 kB
+  ├ chunks/framework-0c7baedefba6b077.js   45.3 kB
+  ├ chunks/main-a82dbdedafde9961.js        32.8 kB
+  ├ chunks/pages/_app-0f2851a7f4a1b707.js  728 B
+  ├ chunks/webpack-fd8027ecb5121007.js     770 B
+  └ css/c1012f45b154dab3.css               3.52 kB
+
+[info] 
+
+[info] λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+[info] 
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /products/[slug]
+[info]  • non-static route /
+[info] 
+[debug] [2023-12-18T16:45:04.885Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:45:05.541Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:45:05.542Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[debug] [2023-12-18T16:45:26.278Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:820:11)
+    at Object.execSync (node:child_process:891:15)
+    at execSync (pkg/prelude/bootstrap.js:2111:30)
+    at prepareFrameworks (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/frameworks/index.js:372:42)
+    at async deploy (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-12-18T16:47:36.452Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:47:36.454Z] Command:       /usr/local/bin/firebase /Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-12-18T16:47:36.455Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:47:36.456Z] Platform:      darwin
+[debug] [2023-12-18T16:47:36.456Z] Node Version:  v18.5.0
+[debug] [2023-12-18T16:47:36.459Z] Time:          Mon Dec 18 2023 23:47:36 GMT+0700 (Indochina Time)
+[debug] [2023-12-18T16:47:36.459Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:47:36.561Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:47:36.562Z] > authorizing via signed-in user (brian.hoang.0101@gmail.com)
+[debug] [2023-12-18T16:47:36.563Z] [iam] checking project tunabook-aff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-18T16:47:36.565Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions [none]
+[debug] [2023-12-18T16:47:36.566Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions x-goog-quota-user=projects/tunabook-aff
+[debug] [2023-12-18T16:47:36.567Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:47:37.567Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions 200
+[debug] [2023-12-18T16:47:37.571Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:47:37.576Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff [none]
+[debug] [2023-12-18T16:47:38.094Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff 200
+[debug] [2023-12-18T16:47:38.098Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff {"projectId":"tunabook-aff","projectNumber":"663731897991","displayName":"tunabook-aff","name":"projects/tunabook-aff","resources":{"hostingSite":"tunabook-aff"},"state":"ACTIVE","etag":"1_9fbf3507-3ab6-4602-ae34-ee3445be221e"}
+[debug] [2023-12-18T16:47:40.190Z] defaultcredentials: writing to file /Users/brianhoang/.config/firebase/brian_hoang.0101_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:47:40.192Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites pageToken=&pageSize=10
+[debug] [2023-12-18T16:47:41.796Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites 200
+[debug] [2023-12-18T16:47:41.797Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites {"sites":[{"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-18T16:47:41.799Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config [none]
+[debug] [2023-12-18T16:47:42.670Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config 200
+[debug] [2023-12-18T16:47:42.671Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config {"projectId":"tunabook-aff","appId":"1:663731897991:web:d0abf27d62446559851a22","storageBucket":"tunabook-aff.appspot.com","apiKey":"AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM","authDomain":"tunabook-aff.firebaseapp.com","messagingSenderId":"663731897991"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-18T16:47:48.022Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:47:48.635Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:47:48.641Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[info]    Linting and checking validity of types ...
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/2) ...
+
+[info]  ✓ Generating static pages (2/2) 
+
+[info]    Finalizing page optimization ...
+   Collecting build traces ...
+
+[info] 
+
+[info] Route (pages)                              Size     First Load JS
+┌ λ /                                      4.55 kB        88.1 kB
+├   /_app                                  0 B            79.6 kB
+├ ○ /404                                   181 B          79.8 kB
+└ λ /products/[slug]                       622 B          84.2 kB
++ First Load JS shared by all              83.1 kB
+  ├ chunks/framework-0c7baedefba6b077.js   45.3 kB
+  ├ chunks/main-a82dbdedafde9961.js        32.8 kB
+  ├ chunks/pages/_app-0f2851a7f4a1b707.js  728 B
+  ├ chunks/webpack-fd8027ecb5121007.js     770 B
+  └ css/c1012f45b154dab3.css               3.52 kB
+
+[info] 
+
+[info] λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+[info] 
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /products/[slug]
+[info]  • non-static route /
+[info] 
+[debug] [2023-12-18T16:48:10.297Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:48:10.741Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:48:10.741Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[debug] [2023-12-18T16:48:18.913Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:820:11)
+    at Object.execSync (node:child_process:891:15)
+    at execSync (pkg/prelude/bootstrap.js:2111:30)
+    at prepareFrameworks (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/frameworks/index.js:372:42)
+    at async deploy (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-12-18T16:49:24.546Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:49:24.549Z] Command:       /usr/local/bin/firebase /Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-12-18T16:49:24.550Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:49:24.551Z] Platform:      darwin
+[debug] [2023-12-18T16:49:24.551Z] Node Version:  v18.5.0
+[debug] [2023-12-18T16:49:24.553Z] Time:          Mon Dec 18 2023 23:49:24 GMT+0700 (Indochina Time)
+[debug] [2023-12-18T16:49:24.553Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:49:24.653Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:49:24.654Z] > authorizing via signed-in user (brian.hoang.0101@gmail.com)
+[debug] [2023-12-18T16:49:24.655Z] [iam] checking project tunabook-aff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-18T16:49:24.656Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions [none]
+[debug] [2023-12-18T16:49:24.657Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions x-goog-quota-user=projects/tunabook-aff
+[debug] [2023-12-18T16:49:24.658Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:49:25.665Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions 200
+[debug] [2023-12-18T16:49:25.669Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:49:25.674Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff [none]
+[debug] [2023-12-18T16:49:26.144Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff 200
+[debug] [2023-12-18T16:49:26.149Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff {"projectId":"tunabook-aff","projectNumber":"663731897991","displayName":"tunabook-aff","name":"projects/tunabook-aff","resources":{"hostingSite":"tunabook-aff"},"state":"ACTIVE","etag":"1_9fbf3507-3ab6-4602-ae34-ee3445be221e"}
+[debug] [2023-12-18T16:49:28.147Z] defaultcredentials: writing to file /Users/brianhoang/.config/firebase/brian_hoang.0101_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:49:28.149Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites pageToken=&pageSize=10
+[debug] [2023-12-18T16:49:28.640Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites 200
+[debug] [2023-12-18T16:49:28.641Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites {"sites":[{"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-18T16:49:28.643Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config [none]
+[debug] [2023-12-18T16:49:29.538Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config 200
+[debug] [2023-12-18T16:49:29.539Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config {"projectId":"tunabook-aff","appId":"1:663731897991:web:d0abf27d62446559851a22","storageBucket":"tunabook-aff.appspot.com","apiKey":"AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM","authDomain":"tunabook-aff.firebaseapp.com","messagingSenderId":"663731897991"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-18T16:49:34.176Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:49:34.678Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:49:34.684Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[info]    Linting and checking validity of types ...
+
+[info]    Creating an optimized production build ...
+
+[info]  ⚠ Found lockfile missing swc dependencies, patching...
+
+[info] (node:21723) ExperimentalWarning: The Fetch API is an experimental feature. This feature could change at any time
+(Use `firebase --trace-warnings ...` to show where the warning was created)
+
+[info]  ✓ Compiled successfully
+
+[info]    Collecting page data ...
+
+[info]  ⚠ Lockfile was successfully patched, please run "npm install" to ensure @next/swc dependencies are downloaded
+
+[info]    Generating static pages (0/2) ...
+
+[info]  ✓ Generating static pages (2/2) 
+
+[info]    Finalizing page optimization ...
+
+[info]    Collecting build traces ...
+
+[info] 
+
+[info] Route (pages)                              Size     First Load JS
+┌ λ /                                      4.55 kB        88.1 kB
+├   /_app                                  0 B            79.6 kB
+├ ○ /404                                   181 B          79.8 kB
+└ λ /products/[slug]                       622 B          84.2 kB
++ First Load JS shared by all              83.1 kB
+  ├ chunks/framework-0c7baedefba6b077.js   45.3 kB
+  ├ chunks/main-a82dbdedafde9961.js        32.8 kB
+  ├ chunks/pages/_app-0f2851a7f4a1b707.js  728 B
+  ├ chunks/webpack-fd8027ecb5121007.js     770 B
+  └ css/c1012f45b154dab3.css               3.52 kB
+
+[info] 
+
+[info] λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+[info] 
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /
+[info]  • non-static route /products/[slug]
+[info] 
+[debug] [2023-12-18T16:49:50.096Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:49:50.781Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:49:50.782Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[debug] [2023-12-18T16:50:01.017Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:820:11)
+    at Object.execSync (node:child_process:891:15)
+    at execSync (pkg/prelude/bootstrap.js:2111:30)
+    at prepareFrameworks (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/frameworks/index.js:372:42)
+    at async deploy (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-12-18T16:50:37.694Z] ----------------------------------------------------------------------
+[debug] [2023-12-18T16:50:37.696Z] Command:       /usr/local/bin/firebase /Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-12-18T16:50:37.696Z] CLI Version:   13.0.2
+[debug] [2023-12-18T16:50:37.697Z] Platform:      darwin
+[debug] [2023-12-18T16:50:37.697Z] Node Version:  v18.5.0
+[debug] [2023-12-18T16:50:37.698Z] Time:          Mon Dec 18 2023 23:50:37 GMT+0700 (Indochina Time)
+[debug] [2023-12-18T16:50:37.698Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-18T16:50:37.794Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-18T16:50:37.795Z] > authorizing via signed-in user (brian.hoang.0101@gmail.com)
+[debug] [2023-12-18T16:50:37.796Z] [iam] checking project tunabook-aff for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-18T16:50:37.798Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions [none]
+[debug] [2023-12-18T16:50:37.799Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions x-goog-quota-user=projects/tunabook-aff
+[debug] [2023-12-18T16:50:37.799Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:50:39.028Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions 200
+[debug] [2023-12-18T16:50:39.032Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tunabook-aff:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-18T16:50:39.037Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff [none]
+[debug] [2023-12-18T16:50:39.380Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff 200
+[debug] [2023-12-18T16:50:39.385Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tunabook-aff {"projectId":"tunabook-aff","projectNumber":"663731897991","displayName":"tunabook-aff","name":"projects/tunabook-aff","resources":{"hostingSite":"tunabook-aff"},"state":"ACTIVE","etag":"1_9fbf3507-3ab6-4602-ae34-ee3445be221e"}
+[debug] [2023-12-18T16:50:41.370Z] defaultcredentials: writing to file /Users/brianhoang/.config/firebase/brian_hoang.0101_gmail.com_application_default_credentials.json
+[debug] [2023-12-18T16:50:41.372Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites pageToken=&pageSize=10
+[debug] [2023-12-18T16:50:41.861Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites 200
+[debug] [2023-12-18T16:50:41.862Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites {"sites":[{"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}]}
+[debug] [2023-12-18T16:50:41.865Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config [none]
+[debug] [2023-12-18T16:50:42.961Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config 200
+[debug] [2023-12-18T16:50:42.962Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:663731897991:web:d0abf27d62446559851a22/config {"projectId":"tunabook-aff","appId":"1:663731897991:web:d0abf27d62446559851a22","storageBucket":"tunabook-aff.appspot.com","apiKey":"AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM","authDomain":"tunabook-aff.firebaseapp.com","messagingSenderId":"663731897991"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-12-18T16:50:47.522Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:50:48.141Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:50:48.148Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[info]    Linting and checking validity of types ...
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/2) ...
+
+[info]  ✓ Generating static pages (2/2) 
+
+[info]    Finalizing page optimization ...
+   Collecting build traces ...
+
+[info] 
+
+[info] Route (pages)                              Size     First Load JS
+┌ λ /                                      4.55 kB        88.1 kB
+├   /_app                                  0 B            79.6 kB
+├ ○ /404                                   181 B          79.8 kB
+└ λ /products/[slug]                       622 B          84.2 kB
++ First Load JS shared by all              83.1 kB
+  ├ chunks/framework-0c7baedefba6b077.js   45.3 kB
+  ├ chunks/main-a82dbdedafde9961.js        32.8 kB
+  ├ chunks/pages/_app-0f2851a7f4a1b707.js  728 B
+  ├ chunks/webpack-fd8027ecb5121007.js     770 B
+  └ css/c1012f45b154dab3.css               3.52 kB
+
+[info] 
+
+[info] λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+[info] 
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /products/[slug]
+[info]  • non-static route /
+[info] 
+[debug] [2023-12-18T16:51:02.358Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff [none]
+[debug] [2023-12-18T16:51:03.000Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff 200
+[debug] [2023-12-18T16:51:03.000Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tunabook-aff/sites/tunabook-aff {"name":"projects/tunabook-aff/sites/tunabook-aff","defaultUrl":"https://tunabook-aff.web.app","appId":"1:663731897991:web:d0abf27d62446559851a22","type":"DEFAULT_SITE"}
+[debug] [2023-12-18T16:51:24.568Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:820:11)
+    at Object.execSync (node:child_process:891:15)
+    at execSync (pkg/prelude/bootstrap.js:2111:30)
+    at prepareFrameworks (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/frameworks/index.js:372:42)
+    at async deploy (/Users/brianhoang/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.

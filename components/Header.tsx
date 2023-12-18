@@ -10,7 +10,6 @@ export default function Header({ scrollHandler }) {
           <div className="absolute inset-0">
             <Image
               priority
-              fill
               className="h-full w-full object-cover"
               src={img}
               placeholder="blur"

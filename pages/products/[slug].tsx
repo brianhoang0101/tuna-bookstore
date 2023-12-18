@@ -7,7 +7,7 @@ export default function Product({ product }) {
       <div className="mx-auto mt-16 max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="mx-auto flex flex-col sm:flex-row">
           <Image
-            alt="coffee"
+            alt="product-image"
             className="rounded-lg"
             src={product.imageGroups[0]}
             width={560}
@@ -31,7 +31,7 @@ export default function Product({ product }) {
   )
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const searchResults = await getProducts(params.slug)
   const coffeeProduct = searchResults[0]
 
@@ -39,19 +39,5 @@ export async function getStaticProps({ params }) {
     props: {
       product: coffeeProduct,
     },
-  }
-}
-
-export async function getStaticPaths() {
-  const coffeeProducts = await getProducts('coffee')
-  let fullPaths = []
-
-  for (let product of coffeeProducts) {
-    fullPaths.push({ params: { slug: product.id } })
-  }
-
-  return {
-    paths: fullPaths,
-    fallback: 'blocking',
   }
 }
