@@ -6,7 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "commerce-sdk": "^2.8.0",
+    "firebase": "^10.7.1",
+    "firebase-admin": "^12.0.0",
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

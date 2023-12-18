@@ -1,57 +1,45 @@
-import { Customer, Product, Search } from 'commerce-sdk'
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
-export default async function getProducts(searchQuery) {
-  const clientConfig = {
-    headers: {
-      authorization: ``,
-    },
-    parameters: {
-      clientId: process.env.SFDC_CLIENT_ID,
-      secret: process.env.SFDC_SECRET,
-      organizationId: process.env.SFDC_ORGANIZATIONID,
-      shortCode: process.env.SFDC_SHORTCODE,
-      siteId: process.env.SFDC_SITEID,
-    },
-  }
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM",
+  authDomain: "tunabook-aff.firebaseapp.com",
+  projectId: "tunabook-aff",
+  storageBucket: "tunabook-aff.appspot.com",
+  messagingSenderId: "663731897991",
+  appId: "1:663731897991:web:d0abf27d62446559851a22"
+};
 
-  const credentials = `${clientConfig.parameters.clientId}:${clientConfig.parameters.secret}`
-  const base64data = Buffer.from(credentials).toString('base64')
-  const headers = { Authorization: `Basic ${base64data}` }
-  const client = new Customer.ShopperLogin(clientConfig)
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-  const shopperToken = await client.getAccessToken({
-    headers,
-    body: {
-      grant_type: 'client_credentials',
-    },
-  })
-
-  const configWithAuth = {
-    ...clientConfig,
-    headers: { authorization: `Bearer ${shopperToken.access_token}` },
-  }
-
-  const searchClient = new Search.ShopperSearch(configWithAuth)
-  const searchResults = await searchClient.productSearch({
-    parameters: { q: searchQuery },
-  })
+export async function getProducts(searchQuery) {
 
   const results = []
-
-  const productsClient = new Product.ShopperProducts(configWithAuth)
-  await Promise.all(
-    searchResults.hits.map(async (product) => {
-      const productResults = await productsClient.getProduct({
-        parameters: {
-          organizationId: clientConfig.parameters.organizationId,
-          siteId: clientConfig.parameters.siteId,
-          id: product.productId,
-        },
-      })
-
-      results.push(productResults)
-    })
-  )
+  const querySnapshot = await getDocs(collection(db, "product"));
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    console.log(doc.id, " => ", doc.data());
+    results.push(doc.data());
+  });
 
   return results
 }
+
+export async function getBestSellerProducts() {
+
+  const results = []
+  const querySnapshot = await getDocs(collection(db, "product"));
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    console.log(doc.id, " => ", doc.data());
+    results.push(doc.data());
+  });
+
+  return results
+}
+
+module.exports = { getProducts, getBestSellerProducts }

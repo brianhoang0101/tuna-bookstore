@@ -4,7 +4,7 @@ module.exports = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'myaccount.dx.commercecloud.salesforce.com',
+        hostname: '**',
         port: '',
       },
     ],

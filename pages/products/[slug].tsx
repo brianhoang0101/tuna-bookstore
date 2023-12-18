@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import getProducts from '../../sfcc.js'
+import {getProducts} from '../../sfcc.js'
 
 export default function Product({ product }) {
   return (
@@ -9,7 +9,7 @@ export default function Product({ product }) {
           <Image
             alt="coffee"
             className="rounded-lg"
-            src={product.imageGroups[0].images[0].link}
+            src={product.imageGroups[0]}
             width={560}
             height={640}
           />
