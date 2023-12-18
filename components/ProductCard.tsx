@@ -15,6 +15,8 @@ export default function ProductCard({ product }) {
         <Image
           alt="product image"
           src={product.imageGroups[0]}
+          width={560}
+          height={640}
           className={cn(
             'object-cover duration-700 ease-in-out group-hover:opacity-75	',
             isLoading
