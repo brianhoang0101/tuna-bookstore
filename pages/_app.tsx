@@ -13,6 +13,7 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>TUNA Book - Tủ sách đáng quý</title>
+        <meta name="google-adsense-account" content="ca-pub-4554403796307363"></meta>
       </Head>
       <main className={`${montserrat.variable} font-sans`}>
         <Component {...pageProps} />
