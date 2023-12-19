@@ -8,7 +8,7 @@ export default function Document() {
       <Head>
         <meta
           name="description"
-          content="TUNA Book - Tủ sách đáng quý, tunabook, tusachbinhyen, tusachgiauco"
+          content="TUNA Book - Tủ sách đáng quý, tunabook, tusachbinhyen, tusachgiauco, sách hay, sách kinh doanh, sách chữa lành, sách phát triển bản thân, sách phật pháp"
         />
         <meta name="google-adsense-account" content="ca-pub-4554403796307363" />
       </Head>

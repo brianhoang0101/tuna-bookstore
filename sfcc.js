@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { collection, getDocs } from "firebase/firestore";
+import { query, where, collection, getDocs } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -21,8 +21,6 @@ export async function getProducts(searchQuery) {
   const results = []
   const querySnapshot = await getDocs(collection(db, "product"));
   querySnapshot.forEach((doc) => {
-    // doc.data() is never undefined for query doc snapshots
-    console.log(doc.id, " => ", doc.data());
     results.push(doc.data());
   });
 
@@ -32,10 +30,10 @@ export async function getProducts(searchQuery) {
 export async function getBestSellerProducts() {
 
   const results = []
-  const querySnapshot = await getDocs(collection(db, "product"));
+  const q = query(collection(db, "product"), where("trending", "==", true));
+
+  const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
-    // doc.data() is never undefined for query doc snapshots
-    console.log(doc.id, " => ", doc.data());
     results.push(doc.data());
   });
 
