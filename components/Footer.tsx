@@ -4,10 +4,10 @@ export default function Footer() {
       <p>© 2022 - TUNA Book Tủ sách đáng quý </p>
       <span>|</span>
       <a
-        href="mailto:tusachdangquy@gmail.com"
+        href="mailto:tusach.dangquy@gmail.com"
         className="font-medium text-orange-600"
       >
-        tusachdangquy@gmail.com
+        tusach.dangquy@gmail.com
       </a>
     </footer>
   )

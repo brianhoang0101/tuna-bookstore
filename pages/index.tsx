@@ -2,6 +2,13 @@ import { useRef } from 'react'
 import Header from '../components/Header'
 import ProductCard from '../components/ProductCard'
 import { getProducts, getBestSellerProducts } from '../sfcc.js'
+import Image from 'next/image'
+import Link from 'next/link'
+import logoTuSachDangQuy from "../public/tusachdangquy.svg"
+import logoTuSachBinhYen from "../public/tusachbinhyen.svg"
+import logoTuSachGiauCo from "../public/tusachgiauco.svg"
+import logoNhaLanhDaoTuongLai from "../public/nhalanhdaotuonglai.svg"
+
 
 export default function Gallery({ trendingBooks, newBooks }) {
   let newBookRef = useRef<HTMLParagraphElement>()
@@ -15,6 +22,11 @@ export default function Gallery({ trendingBooks, newBooks }) {
       behavior: 'smooth',
       block: 'start',
     })
+  }
+
+  const imageStyle = {
+    borderRadius: '50%',
+    border: '1px solid #d5d5d5',
   }
 
   return (
@@ -31,12 +43,79 @@ export default function Gallery({ trendingBooks, newBooks }) {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols2- lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8">
-
-          <blockquote className="tiktok-embed" cite="https://www.tiktok.com/@tusach.dangquy" data-unique-id="tusach.dangquy" data-embed-type="creator" style={{ maxWidth: "780px", minWidth: "288px" }} > <section> <a target="_blank" href="https://www.tiktok.com/@tusach.dangquy?refer=creator_embed">@tusach.dangquy</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-          <blockquote className="tiktok-embed" cite="https://www.tiktok.com/@tusachgiauco" data-unique-id="tusachgiauco" data-embed-type="creator" style={{ maxWidth: "780px", minWidth: "288px" }} > <section> <a target="_blank" href="https://www.tiktok.com/@tusachgiauco?refer=creator_embed">@tusachgiauco</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-          <blockquote className="tiktok-embed" cite="https://www.tiktok.com/@tusachbinhyen" data-unique-id="tusachbinhyen" data-embed-type="creator" style={{ maxWidth: "780px", minWidth: "288px" }} > <section> <a target="_blank" href="https://www.tiktok.com/@tusachbinhyen?refer=creator_embed">@tusachbinhyen</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-          <blockquote className="tiktok-embed" cite="https://www.tiktok.com/@nhalanhdaotuonglai" data-unique-id="nhalanhdaotuonglai" data-embed-type="creator" style={{ maxWidth: "780px", minWidth: "288px" }} > <section> <a target="_blank" href="https://www.tiktok.com/@nhalanhdaotuonglai?refer=creator_embed">@nhalanhdaotuonglai</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+        <div className="grid grid-cols-2 gap-y-10 gap-x-3 sm:grid-cols2- lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-4">
+          <div className='flex horizontal w-full'>
+            <Image
+              style={imageStyle}
+              src={logoTuSachDangQuy}
+              className='aspect-square mr-1'
+              alt='Tiktok Tủ sách đáng quý'
+              width={50}
+              height={50}
+            />
+            <div className="flex-row">
+              <a className='text-sm'>TỦ SÁCH ĐÁNG QUÝ</a>
+              <Link target="_blank"
+                className="flex items-left justify-left text-base font-medium text-orange-600"
+                href="https://www.tiktok.com/@tusach.dangquy">
+                @tusach.dangquy
+              </Link>
+            </div>
+          </div>
+          <div className='flex horizontal w-full'>
+            <Image
+              style={imageStyle}
+              className='aspect-square mr-1'
+              src={logoTuSachGiauCo}
+              alt='Tiktok Tủ sách bình yên'
+              width={50}
+              height={50}
+            />
+            <div className="flex-row">
+              <a className='text-sm overflow-ellipsis overflow-hidden'>TỦ SÁCH GIÀU CÓ</a>
+              <Link target="_blank"
+                className="flex items-left justify-left text-base font-medium text-orange-600"
+                href="https://www.tiktok.com/@tusachgiauco">
+                @tusachgiauco
+              </Link>
+            </div>
+          </div>
+          <div className='flex horizontal w-full'>
+            <Image
+              style={imageStyle}
+              src={logoTuSachBinhYen}
+              alt='Tiktok Tủ sách bình yên'
+              className='aspect-square mr-1'
+              width={50}
+              height={50}
+            />
+            <div className="flex-row">
+              <a className='text-sm'>TỦ SÁCH BÌNH YÊN</a>
+              <Link target="_blank"
+                className="flex items-left justify-left text-base font-medium text-orange-600"
+                href="https://www.tiktok.com/@tusachbinhyen">
+                @tusachbinhyen
+              </Link>
+            </div>
+          </div>
+          <div className='flex horizontal w-full'>
+            <Image
+              style={imageStyle}
+              src={logoNhaLanhDaoTuongLai}
+              className='aspect-square mr-1'
+              alt='Tiktok Tủ sách bình yên'
+              width={50}
+              height={50}
+            />
+            <div className="flex-row">
+              <a className='text-sm'>NHÀ LÃNH ĐẠO TƯƠNG LAI</a>
+              <Link target="_blank"
+                className="flex items-left justify-left text-base font-medium text-orange-600"
+                href="https://www.tiktok.com/@nhalanhdaotuonglai">
+                @nhalanhdaotuonglai
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -70,7 +149,7 @@ export default function Gallery({ trendingBooks, newBooks }) {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 xl:gap-x-8">
+        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {newBooks &&
             newBooks.map((product) => (
               <ProductCard product={product} key={product.id} />
