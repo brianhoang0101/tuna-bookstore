@@ -48,10 +48,8 @@ export default function Gallery({ trendingBooks, newBooks }) {
             <Image
               style={imageStyle}
               src={logoTuSachDangQuy}
-              className='aspect-square mr-1'
+              className='aspect-square mr-1 w-14 h-14'
               alt='Tiktok Tủ sách đáng quý'
-              width={50}
-              height={50}
             />
             <div className="flex-row">
               <a className='text-sm'>TỦ SÁCH ĐÁNG QUÝ</a>
@@ -65,18 +63,16 @@ export default function Gallery({ trendingBooks, newBooks }) {
           <div className='flex horizontal w-full'>
             <Image
               style={imageStyle}
-              className='aspect-square mr-1'
+              className='aspect-square mr-1 w-14 h-14'
               src={logoTuSachGiauCo}
-              alt='Tiktok Tủ sách bình yên'
-              width={50}
-              height={50}
+              alt='Tiktok Tủ sách giàu có'
             />
             <div className="flex-row">
               <a className='text-sm overflow-ellipsis overflow-hidden'>TỦ SÁCH GIÀU CÓ</a>
               <Link target="_blank"
                 className="flex items-left justify-left text-base font-medium text-orange-600"
-                href="https://www.tiktok.com/@tusachgiauco">
-                @tusachgiauco
+                href="https://www.tiktok.com/@tusach.giauco">
+                @tusach.giauco
               </Link>
             </div>
           </div>
@@ -85,9 +81,7 @@ export default function Gallery({ trendingBooks, newBooks }) {
               style={imageStyle}
               src={logoTuSachBinhYen}
               alt='Tiktok Tủ sách bình yên'
-              className='aspect-square mr-1'
-              width={50}
-              height={50}
+              className='aspect-square mr-1 w-14 h-14'
             />
             <div className="flex-row">
               <a className='text-sm'>TỦ SÁCH BÌNH YÊN</a>
@@ -102,10 +96,8 @@ export default function Gallery({ trendingBooks, newBooks }) {
             <Image
               style={imageStyle}
               src={logoNhaLanhDaoTuongLai}
-              className='aspect-square mr-1'
-              alt='Tiktok Tủ sách bình yên'
-              width={50}
-              height={50}
+              className='aspect-square mr-1 w-14 h-14'
+              alt='Tiktok Nhà lãnh đạo tương lai'
             />
             <div className="flex-row">
               <a className='text-sm'>NHÀ LÃNH ĐẠO TƯƠNG LAI</a>
@@ -130,7 +122,7 @@ export default function Gallery({ trendingBooks, newBooks }) {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        <div className="grid grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-x-8">
           {trendingBooks &&
             trendingBooks.map((product) => (
               <ProductCard product={product} key={product.id} />
@@ -149,7 +141,7 @@ export default function Gallery({ trendingBooks, newBooks }) {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+        <div className="grid grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:gap-x-8">
           {newBooks &&
             newBooks.map((product) => (
               <ProductCard product={product} key={product.id} />

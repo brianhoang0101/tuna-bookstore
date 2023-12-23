@@ -31,11 +31,12 @@ export default function ProductCard({ product }) {
           onLoad={() => setLoading(false)}
         />
       </div>
+      
       <div className="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
         <h3>{product.name}</h3>
-        <p>{VND.format(product.price)}</p>
       </div>
-      <p className="mt-1 text-sm italic text-gray-500">
+      <p className='font-bold text-rose-600'>{VND.format(product.price)}</p>
+      <p className="mt-1 text-sm italic text-gray-500 line-clamp-3">
         {product.shortDescription}
       </p>
     </Link>
