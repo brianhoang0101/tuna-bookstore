@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { use, useEffect, useRef } from 'react'
 import Header from '../components/Header'
 import ProductCard from '../components/ProductCard'
 import { getProducts, getBestSellerProducts } from '../sfcc.js'
@@ -9,11 +9,40 @@ import logoTuSachBinhYen from "../public/tusachbinhyen.svg"
 import logoTuSachGiauCo from "../public/tusachgiauco.svg"
 import logoNhaLanhDaoTuongLai from "../public/nhalanhdaotuonglai.svg"
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics, isSupported, logEvent } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCNwGONZCSxy03_nR-361el_a_heSMa9uM",
+  authDomain: "tunabook-aff.firebaseapp.com",
+  projectId: "tunabook-aff",
+  storageBucket: "tunabook-aff.appspot.com",
+  messagingSenderId: "663731897991",
+  appId: "1:663731897991:web:d0abf27d62446559851a22",
+  measurementId: "G-LFK411WN8D"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = isSupported().then(yes => yes ? getAnalytics(app) : null);
 
 export default function Gallery({ trendingBooks, newBooks }) {
   let newBookRef = useRef<HTMLParagraphElement>()
   let socialRef = useRef<HTMLParagraphElement>()
   let trendingBookRef = useRef<HTMLParagraphElement>()
+
+  useEffect(() => {
+    analytics?.then(analytics => logEvent(analytics, 'page_view', {
+      page_title: 'HomePage',
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+    }));
+  }, [])
 
   const scrollHandler = (e) => {
     e.preventDefault()
